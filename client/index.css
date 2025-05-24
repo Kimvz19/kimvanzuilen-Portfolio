@@ -41,5 +41,63 @@
   --font-primair: 'CLAY', sans-serif;
   --font-secundair: 'Quicksand', sans-serif;
   --font-third: "Quicksand", sans-serif;
+  --font-family: 'Unbounded', sans-serif;
 }
 
+
+/*  ⭐️ GENERAL STYLING ⭐️ */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  color: black;
+  text-decoration: none;
+  font-family: Unbounded;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+@container style(--colors:light) {
+	body {
+		color-scheme:light;
+		accent-color:lime;
+		--bg-body:linear-gradient(LightBlue, DeepSkyBlue);
+		--glow-color:lime;
+	}
+}
+
+@container style(--colors:dark) {
+	body {
+    --primary-color:dark;
+		accent-color:lime;
+		--bg-body:linear-gradient(LightBlue, DeepSkyBlue);
+		--glow-color:lime;
+	}
+}
+
+
+/* ⭐️ HEADER & FOOTER STYLING ⭐️ */
+header, footer {
+  background-color: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  padding: 2rem;
+}
+
+ul, li {
+  list-style: none;
+}
