@@ -1,1 +1,16 @@
 /* ⭐️ typography styling ⭐️ */
+
+/* font headings */
+@font-face {
+    font-family: 'CLAY';
+    src: url('/public/fonts/CLAY.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'CLAY';
+    src: url('/public/fonts/CLAY-Round.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
