@@ -30,8 +30,6 @@ const app = new App();
 
 // ⭐️ LIQUID TEMPLATE RENDERING ⭐️ //
 const renderTemplate = (template, data) => {
-
-
   // renderdata samenstellen
   return engine.renderFileSync(template, {
     NODE_ENV: process.env.NODE_ENV || 'production',
@@ -41,13 +39,9 @@ const renderTemplate = (template, data) => {
 
 
 
-// ⭐️ HOME PAGE ⭐️ //
+// ⭐ Home page
 app.get('/', async (req, res) => {
   try {
-    // Pagina ophalen uit de query, standaard is 1
-    // const page = req.query.page || 1;
-
-    // rederen naar index.liquid
     res.send(renderTemplate('server/views/index.liquid', {
       title: 'home'
     }));
@@ -60,19 +54,43 @@ app.get('/', async (req, res) => {
 });
 
 
-// 🐶 DETAIL PAGE 🐶//
-app.get('/detail/:id', async (req, res) => {
+// ⭐ About me page
+app.get('/about-me', async (req, res) => {
   try {
      // data + geo gegevens renderen
-    res.send(renderTemplate('server/views/detail.liquid', {
-      title: 'Detail',
+    res.send(renderTemplate('server/views/about-me.liquid', {
+      title: 'about-me',
     }));
 
     //fout melding 
   } catch (err) {
     console.error(err);
-    res.status(500).send('Detailpagina kon niet laden');
+    res.status(500).send('about me pagina kon niet laden');
   }
+});
+
+// ⭐ my work page
+app.get('/my-work', async (req, res) => {
+
+  res.send(renderTemplate('server/views/my-work.liquid', {
+    title: 'my work',
+  }));
+});
+
+// ⭐ Contact page
+app.get('/contact', async (req, res) => {
+
+  res.send(renderTemplate('server/views/contact.liquid', {
+    title: 'contact',
+  }));
+});
+
+// ⭐ Experiences page
+app.get('/experiences', async (req, res) => {
+
+  res.send(renderTemplate('server/views/experiences.liquid', {
+    title: 'experiences',
+  }));
 });
 
 
@@ -96,15 +114,6 @@ app.get('/detail/:id', async (req, res) => {
 // });
 
 
-
-
-// ⭐ FAVORIETEN OVERZICHT
-app.get('/favorites', async (req, res) => {
-
-  res.send(renderTemplate('server/views/favorites.liquid', {
-    title: 'favs',
-  }));
-});
 
 // const PORT = process.env.PORT || 3000;
 // // 🔊 SERVER START

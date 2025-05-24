@@ -24,13 +24,12 @@
 /* CUSTOM PROPERTIES */
 :root{
   /* main colors */
-  --color-beige: #DDD6CE;
-  --color-beige-light: #F5EBDD;
-  --color-brown: #6E5849;
-  --color-black: #000000;
   --color-white: #FFFFFF; 
+  --color-black: #000000;
 
   /* accent colors */
+  --color-beige: #DDD6CE;
+  --color-beige-light: #F5EBDD;
   --color-pastel-green: #D4F4DD;
   --color-pastel-blue: #DCEEF2;
   --color-pastel-pink: #FADADD;
@@ -38,16 +37,17 @@
   --color-pastel-orange: #F2C6B4;
   
   /* font */
-  --font-primair: 'CLAY', sans-serif;
-  --font-secundair: 'Quicksand', sans-serif;
-  --font-third: "Quicksand", sans-serif;
-  --font-family: 'Unbounded', sans-serif;
+  --font-primair: "unbounded", sans-serif;
+  --font-secundair: "CLAY", sans-serif;
+  --font-third: "CLAY", sans-serif;
+
+  /* derde font toevoegen  */
 }
 
 
 /*  ⭐️ GENERAL STYLING ⭐️ */
 body {
-  font-family: var(--font-family);
+  font-family: var(--font-primair);
   font-weight: 300;
   margin: 0;
   padding: 0;
