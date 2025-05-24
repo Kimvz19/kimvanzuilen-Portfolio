@@ -1,0 +1,34 @@
+{
+  "name": "tryout",
+  "version": "1.0.0",
+  "description": "Portfolio Kim van Zuilen",
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist && mkdir dist",
+    "start": "node server/server.js",
+    "predev": "npm run clean",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:client": "vite --config vite.config.js",
+    "dev:server": "nodemon server/server.js --ext js,liquid",
+    "prebuild": "npm run clean",
+    "build": "npm-run-all build:*",
+    "build:client": "vite build"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tinyhttp/app": "^2.5.2",
+    "@tinyhttp/logger": "^2.1.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.4.7",
+    "liquidjs": "^10.21.0",
+    "node-localstorage": "^3.0.5",
+    "nodemon": "^3.1.9",
+    "npm-run-all": "^4.1.5",
+    "sirv": "^3.0.1",
+    "vite": "^6.2.3",
+    "wft-geodb-js-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}

@@ -1,0 +1,152 @@
+/* ⭐️⭐️⭐️⭐️ */
+/* CLIENT  */
+/* ⭐️⭐️⭐️⭐️ */
+
+/* global styles */
+@import 'reset.css';
+/* @import 'typography.css'; */
+
+
+/* server items inladen */
+/*.layout and view styling */
+@import '../server/layouts/base.css';
+@import '../server/views/index.css';
+
+
+/* component styling */
+@import '../server/components/card/card.css';
+
+/* 💗💗💗💗💗💗💗💗💗 */
+/* GENERAL STYLING */
+/* 💗💗💗💗💗💗💗💗💗 */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-beige-light);
+  color: var(--color-black);
+  font-family: var(--font-secundair);
+  min-height: 90vh;
+}
+
+main{
+  min-height: 89.5vh;
+}
+
+h1{
+  font-size: 3.5em;
+  color: var(--color-black);
+}
+
+a{
+  text-decoration: none ;
+}
+
+ul, ol{
+  list-style: none;
+}
+
+h2{
+  color: var(--color-black);
+  font-size: 2em;
+}
+
+/* CUSTOM PROPERTIES */
+:root{
+  /* main colors */
+  --color-beige: #DDD6CE;
+  --color-beige-light: #F5EBDD;
+  --color-brown: #6E5849;
+  --color-black: #000000;
+  --color-white: #FFFFFF; 
+
+  /* accent colors */
+  --color-pastel-green: #D4F4DD;
+  --color-pastel-blue: #DCEEF2;
+  --color-pastel-pink: #FADADD;
+  --color-pastel-yellow: #FFF5C3;
+  --color-pastel-orange: #F2C6B4;
+  
+  /* font */
+  --font-primair: 'CLAY', sans-serif;
+  --font-secundair: 'Quicksand', sans-serif;
+  --font-third: "Quicksand", sans-serif;
+}
+
+/* made with claude: https://claude.ai/public/artifacts/f86c9bba-b32d-4774-ae11-235597e65f33 */
+/* View Transition animations */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(5rem); }
+  to { transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  from { transform: translateY(0); }
+  to { transform: translateY(5rem); }
+}
+
+/* Main image styling */
+#mainImage {
+  view-transition-name: mainImage;
+  cursor: pointer;
+  transform-origin: center;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Lightbox styling */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-image img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  view-transition-name: mainImage;
+}
+
+.show-lightbox {
+  display: flex !important;
+}
+
+/* View transition styles */
+::view-transition-old(mainImage) {
+  animation: 300ms ease both fade-out;
+}
+
+::view-transition-new(mainImage) {
+  animation: 300ms ease both fade-in, 300ms ease both slide-up;
+}
+
+/* For browsers that don't support view transitions */
+@supports not (view-transition-name: none) {
+  .lightbox {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .show-lightbox {
+    opacity: 1;
+  }
+  
+  #mainImage, .lightbox-image img {
+    transition: transform 2s ease;
+  }
+}

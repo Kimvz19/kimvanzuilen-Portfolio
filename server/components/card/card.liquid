@@ -1,0 +1,33 @@
+<div class="card">
+  <ul class="card-layout">
+    <li>
+
+    {% comment %} card voor elk dier {% endcomment %}
+      <div class="animal-card">
+        <img 
+          src="{{ animal.primary_photo_cropped.small | default: animal.photos[0].small }}" 
+          alt="{{ animal.name }}">
+        <h3>{{ animal.name }}</h3>
+      </div>
+
+      {% comment %} toevoegen aan favorieten {% endcomment %}
+      <form method="POST" action="/favorite">
+      <input type="hidden" name="animalId" value="{{ animal.id }}">
+
+      {% assign idString = animal.id | append: "" %}
+      {% assign isFavorited = favorites contains idString %}
+      <button type="submit" class="favorite-btn">
+        {% if isFavorited %}
+          ❤️
+        {% else %}
+          🤍
+        {% endif %}
+      </button>
+    </form>
+
+    
+    </li>
+  </ul>
+</div>
+
+

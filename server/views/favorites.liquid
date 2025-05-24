@@ -1,0 +1,41 @@
+
+{% layout "server/layouts/base.liquid" %}
+
+{% block favorites %}
+{% comment %} Overview favorieten dieren {% endcomment %}
+  <section class="favorites">
+    <h1>My favorites 🐾 </h1>
+
+{% comment %}  als er geen dieren zijn gefavoriet {% endcomment %}
+    {% if animals.length == 0 %}
+      <p>Je hebt nog geen dieren als favoriet toegevoegd.</p>
+    {% else %}
+
+      <ul class="favorite-animals">
+        {% for animal in animals %}
+          <li>
+            <img src="{{ animal.primary_photo_cropped.small }}" alt="{{ animal.name }}">
+    
+            <h2>{{ animal.name }}</h2>
+
+          {% comment %} gebruiker heeft 2 opties {% endcomment %}
+          {% comment %} detail pagina bekijken {% endcomment %}
+          <div class="options-animals">
+              <a href="/detail/{{ animal.id }}">See more</a>
+
+          {% comment %} Post met verwijderen {% endcomment %}
+          <form method="POST" action="/favorite">
+                <input type="hidden" name="animalId" value="{{ animal.id }}">
+                <button type="submit" class="delete-btn"> Delete  ❤️ </button>
+          </form>
+          </div>
+
+        </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+
+  </section>
+
+{% endblock %}

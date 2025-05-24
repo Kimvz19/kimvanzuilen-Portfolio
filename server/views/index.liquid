@@ -1,0 +1,39 @@
+{% layout "server/layouts/base.liquid" %}
+
+{% block overview %}
+{% comment %} home banner {% endcomment %}
+<div class="homepage">
+<h1>Searching for a family</h1>
+<h2>Would you love me?</h2>
+
+<img src="assets/images/home-banner.png" alt="images of dogs & cats">
+<p>see all the animals</p>
+</div>
+
+
+{% comment %} layout animals overview {% endcomment %}
+<ul class="layout-animals">
+  {% for animal in petfinderData.animals %}
+    <li>
+      <a href="/detail/{{ animal.id }}">
+        {% render 'server/components/card/card.liquid', animal: animal, favorites: favorites %}
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+
+{% comment %} pagina's  {% endcomment %}
+<div class="next-page">
+  {% if currentPage > 1 %}
+    <a href="/?page={{ currentPage | minus: 1 }}">Previous</a>
+  {% endif %}
+
+  {% if currentPage < petfinderData.pagination.total_pages %}
+    <a href="/?page={{ currentPage | plus: 1 }}">Next</a>
+  {% endif %}
+</div>
+
+{% endblock %}
+
