@@ -42,29 +42,31 @@
       </ul>
       
       <ul>
-        <li><a href="#">home</a></li>
+        <li><a href="/">home</a></li>
         <li><a href="#">blog</a></li>
-        <li><a href="#">work</a></li>
-        <li><a href="#">contact</a></li>
+        <li><a href="/about-me">About me</a></li>
+        <li><a href="/my-work">Work</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
       
       <input type="checkbox" id="menu-toggle" />
       <label for="menu-toggle">☰</label>
       
       <ul>
-      <li><a href="#">home</a></li>
+      <li><a href="/">home</a></li>
       <li><a href="#">blog</a></li>
-      <li><a href="#">work</a></li>
-      <li><a href="#">contact</a></li>
+      <li><a href="/about-me">About me</a></li>
+      <li><a href="/my-work">Work</a></li>
+      <li><a href="/contact">Contact</a></li>
       </ul>
     </nav>
 </header>
 
   <main>
     {% block homeOverview %}{% endblock %}
+    {% block myWork %}{% endblock %}
+    {% block contact %} {% endblock %}
     {% block aboutMe %}{% endblock %}
-    {% block contact %}{% endblock %}
-    {% block experiences %}{% endblock %}
   </main>
 
   <footer>

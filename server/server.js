@@ -7,46 +7,35 @@ import { logger } from '@tinyhttp/logger';
 import { Liquid } from 'liquidjs';
 import sirv from 'sirv';
 
-// Imports for data opslaan & vewerken
-// import bodyParser from 'body-parser';
-// import { LocalStorage } from 'node-localstorage';
 
 // ⭐️ LIQUID SETUP ⭐️ //
 const engine = new Liquid({ extname: '.liquid' });
 const app = new App();
 
-//mapje wordt aangemaakt in de root van het project
-// hierin wordt de favoriten data opgeslagen
-// const localStorage = new LocalStorage('./scratch');
-
-//  verwerkt post requests
-// app.use(bodyParser.json())
-// app.use(bodyParser.urlencoded({ extended: true }))
-
-
-// ⭐️ variables ⭐️//
-
-
+// ⭐️ Middleware om path door te geven aan templates
+app.use((req, _, next) => {
+  req.templateData = {
+    path: req.path
+  };
+  next();
+});
 
 // ⭐️ LIQUID TEMPLATE RENDERING ⭐️ //
-const renderTemplate = (template, data) => {
-  // renderdata samenstellen
+const renderTemplate = (template, data = {}, req = {}) => {
   return engine.renderFileSync(template, {
     NODE_ENV: process.env.NODE_ENV || 'production',
+    ...req.templateData,
     ...data
   });
 };
 
-
-
+// ⭐ ROUTES ⭐ //
 // ⭐ Home page
 app.get('/', async (req, res) => {
   try {
     res.send(renderTemplate('server/views/index.liquid', {
       title: 'home'
-    }));
-
-    //fout melding 
+    }, req));
   } catch (err) {
     console.error(err);
     res.status(500).send('Error loading homepage');
@@ -57,66 +46,38 @@ app.get('/', async (req, res) => {
 // ⭐ About me page
 app.get('/about-me', async (req, res) => {
   try {
-     // data + geo gegevens renderen
     res.send(renderTemplate('server/views/about-me.liquid', {
-      title: 'about-me',
-    }));
-
-    //fout melding 
+      title: 'about me',
+    }, req));
   } catch (err) {
     console.error(err);
-    res.status(500).send('about me pagina kon niet laden');
+    res.status(500).send('about me page kon niet laden');
   }
 });
 
 // ⭐ my work page
 app.get('/my-work', async (req, res) => {
-
-  res.send(renderTemplate('server/views/my-work.liquid', {
-    title: 'my work',
-  }));
+  try {
+    res.send(renderTemplate('server/views/my-work.liquid', {
+      title: 'my work',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('my work page kon niet laden');
+  }
 });
 
 // ⭐ Contact page
 app.get('/contact', async (req, res) => {
-
-  res.send(renderTemplate('server/views/contact.liquid', {
-    title: 'contact',
-  }));
+  try {
+    res.send(renderTemplate('server/views/contact.liquid', {
+      title: 'contact',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('contact page kon niet laden');
+  }
 });
-
-// ⭐ Experiences page
-app.get('/experiences', async (req, res) => {
-
-  res.send(renderTemplate('server/views/experiences.liquid', {
-    title: 'experiences',
-  }));
-});
-
-
-// ⭐ Favorite POST ⭐ //
-// app.post('/favorite', (req, res) => {
-//   const animalId = req.body.animalId;
-//   if (!animalId) return res.status(400).send('Geen dier ID');
-
-//   let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-
-
-//   if (favorites.includes(animalId)) {
-//     favorites = favorites.filter(id => id !== animalId);
-
-//   } else {
-//     favorites.push(animalId);
-//   }
-
-//   localStorage.setItem('favorites', JSON.stringify(favorites));
-//   res.redirect(req.headers.referer || '/');
-// });
-
-
-
-// const PORT = process.env.PORT || 3000;
-// // 🔊 SERVER START
 
 app
   .use(logger())
