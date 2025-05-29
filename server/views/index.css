@@ -1,2 +1,234 @@
 /* ⭐️ HOME PAGE ⭐️ */
+.gradientHome {
+    width: 100%;
+    height: 50vh;
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.5) 0%, transparent 60%),
+      radial-gradient(circle at 50% 50%, rgba(173, 216, 230, 0.4) 0%, transparent 60%),
+      radial-gradient(circle at 80% 50%, rgba(144, 238, 144, 0.4) 0%, transparent 60%),
+      rgba(255, 255, 255, 0.3);
+    filter: blur(50px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
 
+
+ .home-banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 50vh;
+    top: 50px;
+    gap: 20px;
+  }
+  
+  .home-banner h1 {
+    font-size: 40px;
+  }
+  
+  .home-banner button{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    font-family: 'Unbounded', sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 12px 28px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* voor Safari */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .scroll-banner {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      justify-content: center;
+      gap: 4rem;
+      list-style: none;
+      top: 20px;
+      overflow: hidden;
+      padding-bottom: 5rem;
+    }
+  
+  .scroll-banner li{
+    font-size: 12px;
+  }
+  
+    /* .scroll-banner li {
+      flex: 0 0 auto;
+      padding: 1rem 1rem;
+      border-radius: 12px;
+      animation-name: slideRight;
+      animation-duration: 3s;
+      animation-fill-mode: both;
+      animation-timing-function: linear;
+      animation-timeline: scroll(root);
+      animation-range: entry 0% exit 50%;
+    } */
+  
+    /* @keyframes slideRight {
+      from {
+        transform: translateX(0px);
+      }
+      to {
+        transform: translateX(250px);
+      }
+    } */
+
+
+
+
+/* ⭐️ my work - block ⭐️ */
+  .overview-work {
+    overflow: auto;
+    padding: 4rem;
+
+    h2{
+        font-size: 1.5rem;
+        text-align: left;
+        font-weight: 200;
+        margin-bottom: 2rem;
+    }
+  
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      width: 120rem;
+  
+      li {
+        flex: 0 0 25rem; 
+        background-color: hotpink;
+        border-radius: 1rem;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+        }
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .scroll-hint {
+    text-align: right;
+    font-size: 1rem;
+    margin-top: -2rem;
+    margin-right: 2rem;
+    color: #888;
+  }
+  
+
+  /* ⭐️ introduction - block ⭐️ */
+
+
+.introduction-me {
+    padding: 2rem;
+    background: lightblue;
+  
+    h2 {
+      display: none;
+    }
+  
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+      width: 100%;
+      background: pink;
+      border-radius: 2rem;
+      padding: 1.5rem;
+  
+      .item {
+        width: 100%;
+      }
+  
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 1rem;
+      }
+  
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 100%;
+        text-align: left;
+  
+        h3 {
+          font-size: 1.3rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+  
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem;
+  
+          span {
+            background: hotpink;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  
+  @media (min-width: 768px) {
+    .introduction-me {
+      padding: 4rem;
+  
+      .card {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3rem;
+        max-width: 70rem;
+        margin: 0 auto;
+  
+        li {
+          width: auto;
+        }
+  
+        img {
+          width: 30rem;
+          height: auto;
+        }
+  
+        div {
+          width: 30rem;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  
