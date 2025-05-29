@@ -426,3 +426,17 @@ details p {
 
     /* work projects */
 }
+
+
+
+/* ⭐️ my work page ⭐️ */
+
+.introduction-developer,
+.introduction-designer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 30vh;
+  background-color: hotpink;
+}
