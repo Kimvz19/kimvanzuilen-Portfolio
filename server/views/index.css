@@ -440,3 +440,33 @@ details p {
   height: 30vh;
   background-color: hotpink;
 }
+
+
+/* ⭐️ Contact ⭐️ */
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30vh;
+  background-color: hotpink;
+}
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20vh;
+  background-color: lightblue;
+  gap: 30rem;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

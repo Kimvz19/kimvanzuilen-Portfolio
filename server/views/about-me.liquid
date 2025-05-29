@@ -1,9 +1,135 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block aboutMe %}
+<section class="introduction-me">
+    <h2>Who am I?</h2>
+    <ul class="card">
+      <li class="item">
+        <img src="https://www.shutterstock.com/image-vector/cute-cat-wear-dino-costume-600nw-2457633459.jpg" alt="cute image">
+      </li>
+      <li class="item">
+        <div>
+          <h3>Hi I'm Kim</h3>
+          <p>
+            I am a third-year student Communication & Multimedia Design at the Hogeschool van Amsterdam. I completed my first year with a propaedeutic. I'm a UX/UI designer & frontend developer, but I'm always open to learn new things! Do you want to get to know me?
+          </p>
+          <ul class="tags">
+            <li><span>crazy</span></li>
+            <li><span>enthusiastic</span></li>
+            <li><span>smart</span></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    </section>
 
-{% comment %} informatie over Kim {% endcomment %}
-<p>kim haar about me</p>
+    <section class="skills-overview">
+  <h2>My Skills</h2>
+  <div class="skills-columns">
+ 
+    <div class="skills-group">
+      <h3>Soft skills:</h3>
+      <ul>
+        <li>Problem solving</li>
+        <li>Active listening</li>
+        <li>Empathy</li>
+        <li>Curiosity</li>
+        <li>Team player</li>
+         <li>Creative</li>
+        <li>Stress-resistant</li>
+        <li>Responsable</li>
+      </ul>
+    </div>
+    <div class="skills-group">
+      <h3>Hard skills:</h3>
+      <ul>
+        <li>HTML & CSS</li>
+        <li>JS</li>
+        <li>Github</li>
+        <li>Nodejs</li>
+        <li>NPM</li>
+        <li>UI design </li>
+        <li>Ux research & design</li>
+        <li>Accessibility</li>
+      </ul>
+    </div>
+    <div class="skills-group">
+      <h3>Design tools:</h3>
+      <ul>
+        <li>Adobe XD</li>
+        <li>Figma</li>
+        <li>Canva</li>
+        <li>Procreate</li>
+        <li>Magento</li>
+        <li>Illustrator</li>
+        <li>Visual Studio</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="experiences">
+    <div class="experiences-wrapper">
+  
+      <div class="content-column">
+        <h2>my experiences</h2>
+        <ul>
+      <li>
+        <details>
+          <summary>Hackathon winning</summary>
+          <p>klalkdffak</p>
+        </details>
+      </li>
+  
+      <li>
+        <details>
+          <summary>information design</summary>
+          <p>klalkdffak</p>
+        </details>
+      </li>
+  
+      <li>
+        <details>
+          <summary>Webdesign & development</summary>
+          <p>klalkdffak</p>
+        </details>
+      </li>
+  
+      <li>
+        <details>
+          <summary>Cum laude - 1st year</summary>
+          <p>klalkdffak</p>
+        </details>
+      </li>
+  
+      <li>
+        <details>
+          <summary>Fashioncheque</summary>
+          <p>klalkdffak</p>
+        </details>
+      </li>
+  
+      <li>
+        <details>
+          <summary>Bitch the agency</summary>
+          <p>klalkdffak</p>
+        </details>
+      </li>
+      
+       <li>
+         <svg xmlns="http://www.w3.org/2000/svg" width="74" height="65" viewBox="0 0 74 65" fill="none">
+  <path d="M37 0.25C37.5975 0.25 38.1652 0.458732 38.5791 0.822266C38.992 1.18496 39.2168 1.66989 39.2168 2.16699V27.8203L39.6318 27.4561L54.6094 14.3027L54.6123 14.2998C54.8154 14.1153 55.0604 13.9671 55.333 13.8643C55.6059 13.7614 55.9007 13.7063 56.1992 13.7041C56.4978 13.7019 56.7935 13.7526 57.0684 13.8516C57.3431 13.9505 57.5911 14.0955 57.7979 14.2773C58.0046 14.4591 58.1659 14.6739 58.2744 14.9072C58.3829 15.1404 58.4372 15.3892 58.4346 15.6387C58.4319 15.8881 58.3722 16.1357 58.2588 16.3672C58.1736 16.5411 58.059 16.7038 57.918 16.8496L57.7686 16.9893L57.7656 16.9922L42.7881 30.1455L42.2891 30.583H71.5332C72.1308 30.583 72.6983 30.7926 73.1123 31.1562C73.5252 31.5189 73.75 32.0029 73.75 32.5C73.75 32.9971 73.5252 33.4811 73.1123 33.8438C72.6983 34.2074 72.1308 34.417 71.5332 34.417H42.293L42.791 34.8545L57.7617 48.0068V48.0078C58.1622 48.3724 58.3772 48.8533 58.3721 49.3447C58.3668 49.836 58.1425 50.3135 57.7344 50.6719C57.3249 51.0312 56.7646 51.2399 56.1738 51.2441C55.5848 51.2484 55.0225 51.049 54.6064 50.6973L39.6318 37.541L39.2168 37.1768V62.833L39.2061 63.0186C39.1575 63.4494 38.9405 63.8603 38.5791 64.1777C38.1652 64.5413 37.5975 64.75 37 64.75C36.4025 64.75 35.8348 64.5413 35.4209 64.1777C35.008 63.815 34.7832 63.3301 34.7832 62.833V37.1797L34.3682 37.5439L19.3896 50.6973C18.9732 51.0484 18.4111 51.2469 17.8223 51.2422C17.2315 51.2374 16.6717 51.0286 16.2627 50.6689C15.8549 50.3102 15.6306 49.8322 15.626 49.3408C15.6215 48.8508 15.8357 48.3716 16.2344 48.0078L31.2119 34.8545L31.7109 34.417H2.4668L2.24414 34.4072C1.7295 34.3623 1.2499 34.1619 0.887695 33.8438C0.474845 33.4811 0.25 32.9971 0.25 32.5C0.25 32.0029 0.474842 31.5189 0.887695 31.1562C1.2499 30.8381 1.7295 30.6377 2.24414 30.5928L2.4668 30.583H31.71L31.2119 30.1455L16.2344 16.9863L16.2314 16.9834L16.082 16.8438C15.9413 16.6979 15.8271 16.5351 15.7422 16.3613C15.629 16.1296 15.5697 15.8814 15.5674 15.6318C15.5651 15.3825 15.619 15.1343 15.7275 14.9014C15.8363 14.6681 15.9981 14.4531 16.2051 14.2715C16.4121 14.0898 16.6606 13.9454 16.9355 13.8467C17.2105 13.748 17.5061 13.6978 17.8047 13.7002C18.1031 13.7026 18.3973 13.7574 18.6699 13.8604C18.8743 13.9376 19.0633 14.0405 19.2305 14.165L19.3906 14.2969L19.3936 14.2998L34.3682 27.459L34.7832 27.8232V2.16699L34.7939 1.98145C34.8425 1.55061 35.0595 1.13972 35.4209 0.822266C35.8348 0.45873 36.4025 0.25 37 0.25Z" stroke="black" stroke-width="0.5"/>
+  </svg>
+      </li>
+        </ul>
+      </div>
+      
+         <div class="image-column">
+        <img src="https://play-lh.googleusercontent.com/ACxlXnn_o1AmwiiWj-Gs2TUdTx27asctBFC8PXOKSP8mIyOLgQmuuCLZ80tPetZnPIY" alt="portrait" class="portrait">
+      </div>
+  
+    </div>
+  </section>
 
 {% endblock %}
 
