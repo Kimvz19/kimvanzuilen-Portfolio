@@ -1,5 +1,9 @@
 /* ⭐️ HOME PAGE ⭐️ */
-
+.display-overview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 /* home banner Intro website  */
 .gradientHome {
@@ -210,6 +214,180 @@
   color: #888;
 }
 
+/* skils */
+
+.skills-overview{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.skills-overview h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.skills-columns {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.skills-group {
+  min-width: 180px;
+}
+
+.skills-group h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.skills-group ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 0;
+}
+
+.skills-group li {
+  margin-bottom: 8px;
+}
+
+
+
+/* experiences */
+
+.experiences {
+  padding: 5rem;
+  width: 100%;
+  color: #000;
+  position: relative;
+}
+
+/* Titel */
+.experiences h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: lowercase;
+  position: relative;
+}
+
+/* Lijst */
+.experiences ul {
+  list-style: none;
+  padding: 0;
+  border-left: 1px solid black; /* LINKER LIJN */
+  position: relative;
+}
+
+/* List items */
+.experiences li {
+  padding: 1.5rem 0;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Summary met lijn rechts */
+summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 5rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Custom marker */
+summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; /* lengte van de lijn */
+  height: 2px;  /* dikte van de lijn */
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+
+/* Tekst in details */
+details p {
+  margin-top: 0.5rem;
+  margin-left: 5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+/* Laatste ster onderaan */
+.star {
+  font-size: 3rem;
+  text-align: right;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.experiences ul li:last-child {
+  position: absolute;
+  bottom: -5;
+  left: -2.3rem; 
+  padding: 0;
+}
+
+
+/* Flex grid voor desktop layout */
+.experiences-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  align-items: flex-start;
+}
+
+/* Kolommen */
+.image-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.content-column {
+  flex: 2;
+}
+
+/* Afbeelding zelf */
+.portrait {
+  display: block;
+  width: 20rem;
+  padding-top: 10rem;
+}
+
+/* Responsive stacking op mobiel */
+@media (max-width: 875px) {
+  .experiences-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-column {
+    order: 2;
+    margin-top: 2rem;
+  }
+
+  .content-column {
+    order: 1;
+    width: 100%;
+  }
+}
 
 
 
