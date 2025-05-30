@@ -1,6 +1,7 @@
 /* ⭐️   General   ⭐️  */
   main{
     position: relative;
+    min-height: 88vh;
   }
 /* Header styling */
 header nav svg {

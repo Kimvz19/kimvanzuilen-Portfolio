@@ -1,5 +1,5 @@
 /* ⭐️ HOME PAGE ⭐️ */
-.display-overview{
+.display-overview {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,70 +7,71 @@
 
 /* home banner Intro website  */
 .gradientHome {
-    width: 100%;
-    height: 50vh;
-    background: 
-      radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.5) 0%, transparent 60%),
-      radial-gradient(circle at 50% 50%, rgba(173, 216, 230, 0.4) 0%, transparent 60%),
-      radial-gradient(circle at 80% 50%, rgba(144, 238, 144, 0.4) 0%, transparent 60%),
-      rgba(255, 255, 255, 0.3);
-    filter: blur(50px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
+  width: 100%;
+  height: 50vh;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 192, 203, 0.5) 0%, transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(173, 216, 230, 0.4) 0%, transparent 60%),
+    radial-gradient(circle at 80% 50%, rgba(144, 238, 144, 0.4) 0%, transparent 60%),
+    rgba(255, 255, 255, 0.3);
+  filter: blur(50px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
 
 
- .home-banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 50vh;
-    top: 50px;
-    gap: 20px;
-  }
-  
-  .home-banner h1 {
-    font-size: 40px;
-  }
-  
-  .home-banner button{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: black;
-    font-family: 'Unbounded', sans-serif;
-    font-size: 16px;
-    font-weight: 200;
-    padding: 12px 28px;
-    border: 2px solid rgba(255, 255, 255, 0.6);
-    border-radius: 30px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); /* voor Safari */
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .scroll-banner {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      justify-content: center;
-      gap: 4rem;
-      list-style: none;
-      top: 20px;
-      overflow: hidden;
-      padding-bottom: 5rem;
-    }
-  
-  .scroll-banner li{
-    font-size: 12px;
-  }
-  
-    /* .scroll-banner li {
+.home-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 50vh;
+  top: 50px;
+  gap: 20px;
+}
+
+.home-banner h1 {
+  font-size: 40px;
+}
+
+.home-banner button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  font-family: 'Unbounded', sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 12px 28px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* voor Safari */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-banner {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  justify-content: center;
+  gap: 4rem;
+  list-style: none;
+  top: 20px;
+  overflow: hidden;
+  padding-bottom: 5rem;
+}
+
+.scroll-banner li {
+  font-size: 12px;
+}
+
+/* .scroll-banner li {
       flex: 0 0 auto;
       padding: 1rem 1rem;
       border-radius: 12px;
@@ -81,8 +82,8 @@
       animation-timeline: scroll(root);
       animation-range: entry 0% exit 50%;
     } */
-  
-    /* @keyframes slideRight {
+
+/* @keyframes slideRight {
       from {
         transform: translateX(0px);
       }
@@ -93,69 +94,70 @@
 
 
 
-  /* ⭐️ introduction - block ⭐️ */
+/* ⭐️ introduction - block ⭐️ */
 
 
 .introduction-me {
   padding: 1rem;
-    h2 {
-      display: none;
+
+  h2 {
+    display: none;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+
+    border-radius: 2rem;
+    padding: 1.5rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 30rem;
+      border-radius: 1rem;
+      place-content: center;
     }
-  
-    .card {
+
+    div {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1.2rem;
+      gap: .5rem;
       width: 100%;
+      text-align: left;
 
-      border-radius: 2rem;
-      padding: 1.5rem;
-  
-      img {
-        width: 100%;
-        height: auto;
-        max-width: 30rem;
-        border-radius: 1rem;
-        place-content: center;
+      h3 {
+        font-size: 1.3rem;
       }
-  
-      div {
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      .tags {
         display: flex;
-        flex-direction: column;
-        gap: .5rem;
-        width: 100%;
-        text-align: left;
-  
-        h3 {
-          font-size: 1.3rem;
-        }
-  
-        p {
-          font-size: 1rem;
-          line-height: 1.5;
-        }
-  
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            row-gap: 2rem;
-            padding-top: 1rem;
-  
-          span {
-            background: hotpink;
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            color: white;
-          }
+        flex-wrap: wrap;
+        gap: 1rem;
+        row-gap: 2rem;
+        padding-top: 1rem;
+
+        span {
+          background: hotpink;
+          padding: 0.5rem 1rem;
+          border-radius: 2rem;
+          font-size: 0.9rem;
+          color: white;
         }
       }
     }
   }
+}
 
-  
+
 
 
 
@@ -164,12 +166,12 @@
 .overview-work {
   padding: 1.5rem;
 
-  h2{
-      font-size: 1.5rem;
-      text-align: left;
-      font-weight: 200;
-      padding-left: 1rem;
-      margin-bottom: 2rem;
+  h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 200;
+    padding-left: 1rem;
+    margin-bottom: 2rem;
   }
 
   .scroll-container {
@@ -185,7 +187,7 @@
     width: 120rem;
 
     li {
-      flex: 0 0 25rem; 
+      flex: 0 0 25rem;
       background-color: hotpink;
       border-radius: 1rem;
       overflow: hidden;
@@ -216,7 +218,7 @@
 
 /* skils */
 
-.skills-overview{
+.skills-overview {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -278,7 +280,8 @@
 .experiences ul {
   list-style: none;
   padding: 0;
-  border-left: 1px solid black; /* LINKER LIJN */
+  border-left: 1px solid black;
+  /* LINKER LIJN */
   position: relative;
 }
 
@@ -313,8 +316,10 @@ summary::before {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px; /* lengte van de lijn */
-  height: 2px;  /* dikte van de lijn */
+  width: 40px;
+  /* lengte van de lijn */
+  height: 2px;
+  /* dikte van de lijn */
   background-color: black;
   transition: transform 0.3s ease;
 }
@@ -340,7 +345,7 @@ details p {
 .experiences ul li:last-child {
   position: absolute;
   bottom: -5;
-  left: -2.3rem; 
+  left: -2.3rem;
   padding: 0;
 }
 
@@ -424,7 +429,7 @@ details p {
 
 
 
-    /* work projects */
+  /* work projects */
 }
 
 
@@ -432,7 +437,7 @@ details p {
 /* ⭐️ my work page ⭐️ */
 
 .introduction-developer,
-.introduction-designer{
+.introduction-designer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -443,30 +448,67 @@ details p {
 
 
 /* ⭐️ Contact ⭐️ */
-.contact-info{
+.contact-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: 30vh;
-  background-color: hotpink;
-}
+  background-color: lightpink;
+  text-align: center;
 
-.contact{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 20vh;
-  background-color: lightblue;
-  gap: 30rem;
 
-  form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  p {
+    line-height: 1.5;
   }
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: lightblue;
+  padding: 1rem;
+  gap: 1rem;
+
+  ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: pink;
+    padding: 5rem 9em;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 15em;
+    background-color: lightgrey;
+    gap: 1rem;
+
+    h2{
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+}
