@@ -485,7 +485,22 @@ details p {
     align-items: center;
     background-color: pink;
     padding: 5rem 9em;
+    gap: .5rem;
+
+    li:nth-of-type(1){
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+
+    div{
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
   }
+
+
 
   form {
     display: flex;
