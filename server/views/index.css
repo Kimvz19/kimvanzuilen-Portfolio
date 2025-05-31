@@ -209,34 +209,35 @@
   padding: 5rem;
   width: 100%;
   color: #000;
-  position: relative;
+
+  display: flex;
+  justify-content: center;
+  padding-left: 1.5;
 }
 
 /* Titel */
 .experiences h2 {
   font-size: 3rem;
-  font-weight: 900;
-  text-transform: lowercase;
-  position: relative;
+  font-weight: 700;
 }
 
 /* Lijst */
 .experiences ul {
   list-style: none;
-  padding: 0;
   border-left: 1px solid black;
-  /* LINKER LIJN */
   position: relative;
+  height: fit-content;
+  margin-top: 2.5rem;
 }
 
 /* List items */
 .experiences li {
   padding: 1.5rem 0;
   text-transform: capitalize;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  position: relative;
 }
 
 /* Summary met lijn rechts */
@@ -286,12 +287,6 @@ details p {
   padding-top: 2rem;
 }
 
-.experiences ul li:last-child {
-  position: absolute;
-  bottom: -5;
-  left: -2.3rem;
-  padding: 0;
-}
 
 
 /* Flex grid voor desktop layout */
@@ -325,6 +320,7 @@ details p {
   .experiences-wrapper {
     flex-direction: column;
     align-items: center;
+    gap: 0rem;
   }
 
   .image-column {
@@ -369,6 +365,22 @@ details p {
         padding-top: 1.5rem;
       }
     }
+  }
+
+  /* skills */
+  .skills-columns{
+    gap: 15rem;
+  }
+
+/* experience */
+  .experiences-wrapper {
+    gap: 15rem;
+  }
+
+/* work  */
+  .overview-work{
+    display: flex;
+    align-items: center;
   }
 }
 
