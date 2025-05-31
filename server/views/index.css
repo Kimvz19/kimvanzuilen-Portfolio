@@ -369,10 +369,6 @@ details p {
       }
     }
   }
-
-
-
-  /* work projects */
 }
 
 
@@ -397,8 +393,6 @@ details p {
   }
 }
 
-
-/* ⭐️ my work - block ⭐️ */
 .overview-work {
   padding: .5rem;
 
@@ -422,7 +416,6 @@ details p {
     width: 120rem;
 
     li {
-      flex: 0 0 25rem;
       background-color: hotpink;
       border-radius: 1rem;
       overflow: hidden;
@@ -449,6 +442,7 @@ details p {
   margin-bottom: 1rem;
   color: #888;
 }
+
 
 
 /* ⭐️ Contact ⭐️ */
