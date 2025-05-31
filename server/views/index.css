@@ -1,9 +1,9 @@
 /* ⭐️ HOME PAGE ⭐️ */
-.display-overview {
+/* .display-overview {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /* home banner Intro website  */
 .gradientHome {
@@ -383,7 +383,6 @@ details p {
   width: 100%;
   height: 45vh;
   gap: 1rem;
-  background-color: hotpink;
   justify-content: center;
 
   button{
@@ -391,10 +390,26 @@ details p {
     border-radius: .5rem;
     border: none;
   }
+
+  h2{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+.introduction-developer{
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+}
+
+.introduction-designer {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
 }
 
 .overview-work {
-  padding: .5rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
 
   h2 {
     font-size: 1.5rem;
@@ -431,7 +446,6 @@ details p {
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
     }
   }
 }
