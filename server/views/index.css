@@ -129,6 +129,21 @@
       width: 100%;
       text-align: left;
 
+      a{
+        background-color: lightpink;
+        text-align: center;
+        padding: 1rem 1rem;
+        border-radius: .5rem;
+        width: 10rem;
+        margin-top: .5rem;
+
+        &:hover{
+          scale: 1.05;
+          background-color: pink;
+          border: .2rem solid hotpink;
+        }
+      }
+
       h3 {
         font-size: 1.3rem;
       }
