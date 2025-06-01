@@ -86,6 +86,20 @@ app.get('/contact', async (req, res) => {
   }
 });
 
+// projects 
+app.get('/project-hackathon', async (req, res) => {
+  try {
+    res.send(renderTemplate('server/views/projcets/hackathon.liquid', {
+      title: 'hackathon project',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('hackathon project page kon niet laden');
+  }
+});
+
+
+
 app
   .use(logger())
   .use('/', sirv(process.env.NODE_ENV === 'development' ? 'client' : 'dist'))
