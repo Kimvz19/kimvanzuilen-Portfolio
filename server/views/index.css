@@ -176,6 +176,41 @@
 }
 
 
+/* automatic tape bar */
+
+.tape-bar {
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.scrolling-list {
+  display: flex;
+  width: max-content;
+  animation: scrollLoop 20s linear infinite;
+  list-style: none;
+  gap: 2rem;
+}
+
+.scrolling-list li {
+  flex-shrink: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
 
 /* skils */
 
