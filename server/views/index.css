@@ -130,22 +130,27 @@
       text-align: left;
 
       a{
-        background-color: lightpink;
-        text-align: center;
-        padding: 1rem 1rem;
-        border-radius: .5rem;
+        background-color: #FFD2E2;
+        border: none;
         width: 10rem;
-        margin-top: .5rem;
+        padding: .7rem 1rem;
+        font-size: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        text-align: center;
+        border-radius: 1rem;
 
         &:hover{
           scale: 1.05;
-          background-color: pink;
-          border: .2rem solid hotpink;
+          border: .2rem solid #FF5D96;
         }
       }
 
       h3 {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
+        padding-top: 2rem;
+        font-weight: 600;
       }
 
       p {
