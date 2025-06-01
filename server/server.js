@@ -7,6 +7,13 @@ import { logger } from '@tinyhttp/logger';
 import { Liquid } from 'liquidjs';
 import sirv from 'sirv';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
 
 // ⭐️ LIQUID SETUP ⭐️ //
 const engine = new Liquid({ extname: '.liquid' });
@@ -83,5 +90,6 @@ app
   .use(logger())
   .use('/', sirv(process.env.NODE_ENV === 'development' ? 'client' : 'dist'))
   .use('/assets', sirv('assets'))
+  .use('/assets', sirv(path.resolve(__dirname, '../assets')))
   .listen(3000, () => console.log('Server running at http://localhost:3000'));
   // .listen(PORT, () => console.log(`Listening on ${PORT}`));
