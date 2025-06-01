@@ -197,7 +197,7 @@
 .scrolling-list li {
   flex-shrink: 0;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 500;
   white-space: nowrap;
 }
 
@@ -219,13 +219,125 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 3rem 2rem;
+  background-image: url("/assets/images/background-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.skills-overview h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: black;
+  text-align: center;
+}
+
+/* === COLUMNS LAYOUT === */
+.skills-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* === CARD STYLING FOR EACH GROUP === */
+.skills-group {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  min-width: 280px;
+}
+
+.skills-group:hover {
+  transform: translateY(-4px);
+}
+
+.skills-group h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: black;
+}
+
+/* === INDIVIDUELE LI ITEMS === */
+.skills-group li {
+  list-style: none;
+  position: relative;
+  font-weight: 500;
+  padding: 0.4rem 1.5rem 0.4rem 1rem;
+  margin-bottom: 10px;
+  border-radius: 3rem;
+  /* background: rgba(255, 255, 255, 0.2); */
+  /* backdrop-filter: blur(6px); */
+  color: black;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  cursor: default;
+  text-align: left;
+}
+
+/* SPARKLE AAN HET EINDE ⬇ */
+.skills-group li::after {
+  content: "✶";
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%) scale(0.4);
+  opacity: 0;
+  font-size: 1rem;
+  color: var(--sparkle-color);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.skills-group li:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.skills-group li:hover {
+  transform: scale(1.05);
+  background: var(--hover-bg);
+  color: black;
+}
+
+/* === CUSTOM COLORS PER GROUP === */
+.skills-group:nth-of-type(1) li {
+  --hover-bg: #d7ffe4;
+  --sparkle-color: #74e4a4;
+}
+
+.skills-group:nth-of-type(2) li {
+  --hover-bg: #dcf4ff;
+  --sparkle-color: #70caff;
+}
+
+.skills-group:nth-of-type(3) li {
+  --hover-bg: #ffe5f6;
+  --sparkle-color: #f57ada;
+}
+
+/*
+.skills-overview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
   background-image: url("/assets/images/background-cover.png");
   background-repeat: no-repeat;
   background-size: cover;
-  /* background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); */
-}
-
+  /* background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db); 
+}*/
+/* 
 .skills-overview h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
@@ -242,20 +354,31 @@
   }
 }
 
-
 .skills-group h3 {
   font-size: 1.1rem;
   margin-bottom: 10px;
   font-weight: 500;
 }
-/* 
-.skills-group ul {
-  list-style-type: disc;
-} */
-
 .skills-group li {
   margin-bottom: 8px;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -421,10 +544,6 @@ details p {
     }
   }
 
-  /* skills */
-  .skills-columns{
-    gap: 15rem;
-  }
 
 /* experience */
   .experiences-wrapper {
