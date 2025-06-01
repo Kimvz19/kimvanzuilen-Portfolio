@@ -206,18 +206,15 @@
 /* experiences */
 
 .experiences {
-  padding: 5rem;
+  padding: 2rem;
   width: 100%;
   color: #000;
-
-  display: flex;
-  justify-content: center;
   padding-left: 1.5;
 }
 
 /* Titel */
 .experiences h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -302,6 +299,7 @@ details p {
   flex: 1;
   display: flex;
   justify-content: center;
+  padding-top: 5rem;
 }
 
 .content-column {
@@ -310,9 +308,9 @@ details p {
 
 /* Afbeelding zelf */
 .portrait {
-  display: block;
-  width: 20rem;
-  padding-top: 10rem;
+  display: flex;
+  width: 30rem;
+  border-radius: 1rem;
 }
 
 /* Responsive stacking op mobiel */
@@ -377,11 +375,25 @@ details p {
     gap: 15rem;
   }
 
+  .experiences{
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+
+    h2{
+      font-size: 3rem;
+    }
+  }
+
 /* work  */
   .overview-work{
     display: flex;
     align-items: center;
   }
+
+  
+
+
 }
 
 
