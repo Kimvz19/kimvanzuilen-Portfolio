@@ -166,6 +166,7 @@
     font-size: 30px;
   }
 
+
   a {
     background: var(--color-white);
     color: var(--color-black);
@@ -414,6 +415,7 @@
   p{
     line-height: 1.6;
     margin-bottom: 1.2rem;
+    max-width: 80rem;
   }
 
   ul{
@@ -541,7 +543,8 @@ img {
   display: flex;
   flex-direction: column;
   gap: var(--2-rem);
-  margin-bottom: var(--2-rem);
+
+  /* margin-bottom: var(--2-rem); */
 
   &:first-of-type,
   &:last-of-type{
@@ -557,6 +560,8 @@ img {
     align-items: center;
     object-fit: cover;
     margin-bottom: 2.5rem;
+    position: relative;
+    transition: transform 0.4s ease;
   }
 
   .text {
@@ -574,13 +579,38 @@ img {
 
 .project-section .image img {
   width: 100%;
-  max-width: 500px;
   border-radius: var(--radius-1);
   display: block;
   border: 1px solid var(--color-image-border);
   margin: 0 auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
+.small{
+  max-width: 500px;
+}
+
+
+/* 📎 pseudo-element */
+.project-section .image::before {
+  content: "📎";
+  position: absolute;
+  top: -1.2rem;
+  left: 50%;
+  font-size: 3rem;
+  z-index: 5;
+  transition: transform 0.4s ease, top 0.4s ease;
+}
+
+/* === Hover effect === */
+.project-section .image:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.05);
+}
+
+.project-section .image:hover::before {
+  transform: rotate(5deg) scale(.8);
+}
 
 
 @media (min-width: 768px) {
@@ -1147,4 +1177,123 @@ hr{
   p{
     max-width: 65rem;
   }
+}
+
+
+/* SKILSS */
+/* === SKILLS OVERVIEW === */
+.skills-overview {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  background-image: url("/assets/images/background-cover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  border-left: none;
+  border-right: none;
+  border-top: 5.5px dashed #e9a5c6;
+  border-bottom: 5.5px dashed #e9a5c6;
+
+  margin-bottom: 2rem;
+}
+
+.skills-overview h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: black;
+  text-align: center;
+}
+
+/* === COLUMNS LAYOUT === */
+.skills-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* === CARD STYLING FOR EACH GROUP === */
+.skills-group {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  min-width: 280px;
+}
+
+.skills-group:hover {
+  transform: translateY(-4px);
+}
+
+.skills-group h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: black;
+}
+
+/* === INDIVIDUAL LI ITEMS === */
+.skills-group li {
+  list-style: none;
+  position: relative;
+  font-weight: 500;
+  padding: 0.4rem 1.5rem 0.4rem 1rem;
+  margin-bottom: 10px;
+  border-radius: 3rem;
+  color: black;
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  cursor: default;
+  text-align: left;
+}
+
+/* === SPARKLE EFFECT === */
+.skills-group li::after {
+  content: "✶";
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%) scale(0.4);
+  opacity: 0;
+  font-size: 1rem;
+  color: var(--sparkle-color);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.skills-group li:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.skills-group li:hover {
+  transform: scale(1.05);
+  background: var(--hover-bg);
+  color: black;
+}
+
+/* === CUSTOM COLORS PER GROUP === */
+.skills-group:nth-of-type(1) li {
+  --hover-bg: #d7ffe4;
+  --sparkle-color: #74e4a4;
+}
+
+.skills-group:nth-of-type(2) li {
+  --hover-bg: #dcf4ff;
+  --sparkle-color: #70caff;
+}
+
+.skills-group:nth-of-type(3) li {
+  --hover-bg: #ffe5f6;
+  --sparkle-color: #f57ada;
 }
