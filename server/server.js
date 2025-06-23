@@ -87,7 +87,7 @@ app.get('/contact', async (req, res) => {
 });
 
 // projects 
-app.get('/project-hackathon', async (req, res) => {
+app.get('/hackathon', async (req, res) => {
   try {
     res.send(renderTemplate('server/views/projcets/hackathon.liquid', {
       title: 'hackathon project',
