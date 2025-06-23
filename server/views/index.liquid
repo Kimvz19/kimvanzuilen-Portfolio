@@ -1,2 +1,57 @@
 {% layout "server/layouts/base.liquid" %}
 
+{% block homeOverview %}
+
+<section class="widgets">
+  <ul>
+    <li class="introduction">
+      <h2>Welcome to my desktop!</h2>
+      <p>This desktop will guide you through my projects, summaries from speakers and more! Have fun exploring 🤍</p>
+    </li>
+
+    <li class="hackathon">
+        <img src="/assets/images/profile-picture.png" alt="profile-pic">
+    </li>
+
+    <li class="meesterproef">
+            <h3>Hi I'm Kim</h3>
+    </li>
+
+    <li class="weekly-nerd">
+        <p>
+           Front-end developer & UX, UI Designer!
+        </p>
+    </li>
+
+
+
+    {% comment %} <li class="weekly-nerd">
+      <p>Weekly nerds</p>
+      <a href="/weeklynerd-overview">See more</a>
+    </li> {% endcomment %}
+{% comment %}     
+    <li class="subjects">
+      <p>I am a third-year student Communication & Multimedia Design at the Hogeschool van Amsterdam,
+        Completed my first year with a propaedeutic. </p>
+      <a href="/projects-overview">See more</a>
+    </li>  {% endcomment %}
+
+    <li class="time">
+      <p>Time</p>
+      <p>{{ 'now' | date: "%H:%M" }}</p>
+    </li> 
+
+
+     {% comment %} <li class="projects">
+      <p>🎀🤍🧸🪩</p>
+        <a href="/reflection">Reflection</a>
+      </li>  {% endcomment %}
+
+      
+
+
+  </ul>
+</section>
+
+
+{% endblock %}
