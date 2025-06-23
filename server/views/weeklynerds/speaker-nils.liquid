@@ -1,0 +1,140 @@
+{% layout "server/layouts/base.liquid" %}
+
+
+{% block project %}
+
+<ul class="subjects-overview">
+    <li><h2> ✨ Speaker Nils Binder ✨</h2></li>
+    <li><p>Scroll down to see my notations</p></li>
+    <li>  
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+        </svg></li>
+    </li>
+</ul>
+    {% comment %} <h2>Stop using JS, but instead HTML & CSS </h2> {% endcomment %}
+
+<section class="map-overview">
+<div class="window">
+  <div class="toolbar">
+    <div class="traffic-lights">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+    </div>
+    <div class="title">FIFTH SPEAKER - NILS BINDER</div>
+  </div>
+  <div class="content">
+    <aside class="sidebar">
+      <div class="section">Favorites</div>
+      <ul>
+        <li>AirDrop</li>
+        <li>Recents</li>
+        <li>Applications</li>
+        <li>Desktop</li>
+        <li>Documents</li>
+        <li>Downloads</li>
+      </ul>
+      <div class="section">iCloud</div>
+      <ul>
+        <li>iCloud Drive</li>
+        <li>Shared</li>
+      </ul>
+      <div class="section">Tags</div>
+      <ul class="tags">
+        <li><span class="dot red-dot"></span>Red</li>
+        <li><span class="dot orange-dot"></span>Orange</li>
+        <li><span class="dot yellow-dot"></span>Yellow</li>
+        <li><span class="dot green-dot"></span>Green</li>
+        <li><span class="dot blue-dot"></span>Blue</li>
+        <li><span class="dot purple-dot"></span>Purple</li>
+        <li><span class="dot gray-dot"></span>Gray</li>
+      </ul>
+    </aside>
+
+
+  <div class="main-content">
+  
+    <div class="single-project">
+        <section class="introduction-project change-color">
+          <ul>
+            <li><p class="badge-lightpink">Speaker 5</p></li>
+            <li><h1>Not the normal <span class="highlight">lay-out</span></h1></li>
+          </ul>
+        </section>
+
+
+        <article class="project-section">
+          <div class="text">
+            <h2 class="gradient-greypink"> Summary </h2>
+            <p>
+              Nils talked about a lay-out on a page on how figma and the way the web is used by users, has a impact on how a lay-out looks and works. 
+              He told about wrappers, grid & flex, how a lay-out needs to be flexiable and there are no fixed sizes of a screen. Their are calculations to 
+              help with the flexibility, so check out the notations!
+            </p>
+          </div>
+        </article>
+
+        <article class="project-section">
+          <div class="text">
+            <h2 class="gradient-greypink"> 💫 Reflectie</h2>
+            <p>
+              I thought the talk was very informative, which was cleary shown in the amounts of notations that I made through his talk.
+              It's true that lay-outs are for everybody different so it's important that the lay-out is flexible and adapt to your own screen.
+              The introduction to clamp was a eye-opener for me! I use it a lot now in my own projects as wel as de unit Rem!
+            </p>
+          </div>
+        </article>
+    </div>
+    <section class="topic">
+      <h2>Viewport & Wrapper</h2>
+      <article>
+        <ul>
+          <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> zet de basis voor responsive gedrag.</li>
+          <li><code>.wrapper { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }</code> zorgt voor een gecentreerde lay-out met marge.</li>
+          <li>Gebruik van CSS-units zoals <code>rem</code>, <code>em</code>, <code>vw</code>, <code>%</code> voor schaalbaarheid.</li>
+        </ul>
+      </article>
+    </section>
+    
+    <section class="topic">
+      <h2>Grid & Units</h2>
+      <article>
+        <ul>
+          <li><code>display: grid;</code> zet een grid context op.</li>
+          <li>
+            <pre><code>.grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }</code></pre>
+            Definieert 3 kolommen die elk 1 deel (1fr) van de beschikbare ruimte krijgen.
+          </li>
+          <li><code>@media (min-width: 768px)</code> past het aantal kolommen aan voor grotere schermen.</li>
+        </ul>
+      </article>
+    </section>
+    
+    <section class="topic">
+      <h2>Formulieren & Select Elements</h2>
+      <article>
+        <ul>
+          <li><code>&lt;select&gt;&lt;option&gt;&lt;/option&gt;&lt;/select&gt;</code> is de standaard manier voor selectielijsten.</li>
+          <li><code>appearance: none;</code> wordt gebruikt om eigen styling toe te passen.</li>
+          <li><code>::after</code> kan een eigen icoon of pijltje toevoegen aan de select-wrapper.</li>
+        </ul>
+      </article>
+    </section>
+    
+    <section class="topic">
+      <h2>Scroll Behavior</h2>
+      <article>
+        <ul>
+          <li><code>.my-target { scroll-margin-top: 20px; }</code> zorgt dat bij een anchor jump ruimte boven het doel blijft.</li>
+        </ul>
+      </article>
+    </section>
+</div>
+
+</section>
+{% endblock %}

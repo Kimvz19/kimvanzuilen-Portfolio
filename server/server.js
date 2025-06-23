@@ -89,7 +89,7 @@ app.get('/experiences', async (req, res) => {
 // projects 
 app.get('/weekly-nerd', async (req, res) => {
   try {
-    res.send(renderTemplate('server/views/projcets/weekly-nerd.liquid', {
+    res.send(renderTemplate('server/views/projects/weekly-nerd.liquid', {
       title: 'weekly-nerd',
     }, req));
   } catch (err) {
@@ -97,6 +97,42 @@ app.get('/weekly-nerd', async (req, res) => {
     res.status(500).send('unable to load weekly-nerd');
   }
 });
+
+
+// Weekly nerds routes
+const speakerRoute = (path, file, title) => {
+  app.get(path, async (req, res) => {
+    try {
+      res.send(renderTemplate(`server/views/weeklynerds/${file}.liquid`, {
+        title: title
+      }, req));
+
+    } catch (err) {
+      console.error(err);
+      res.status(500).send(`${title} kon niet laden`);
+    }
+  });
+};
+
+// Routes voor alle sprekers
+speakerRoute('/speaker-kilian', 'speaker-kilian', 'Kilian');
+speakerRoute('/speaker-peter-paul-koch', 'speaker-peter-paul-koch', 'Peter Paul Koch');
+speakerRoute('/speaker-nils', 'speaker-nils', 'Nils Binder');
+speakerRoute('/speaker-nienke', 'speaker-nienke', 'Nienke de Keijzer');
+speakerRoute('/speaker-roel', 'speaker-roel', 'Roel Nieskens');
+speakerRoute('/speaker-cassie', 'speaker-cassie', 'Cassie Evans');
+speakerRoute('/speaker-krijn', 'speaker-krijn', 'Krijn');
+speakerRoute('/speaker-jeremy', 'speaker-jeremy', 'Jeremy Keith');
+speakerRoute('/speaker-julia', 'speaker-julia', 'Julia Miocene');
+speakerRoute('/speaker-declan', 'speaker-declan', 'Declan');
+speakerRoute('/speaker-cyd', 'speaker-cyd', 'Cyd');
+speakerRoute('/speaker-rosa', 'speaker-rosa', 'Rosa');
+speakerRoute('/speaker-niels', 'speaker-niels', 'Niels Leenheer');
+speakerRoute('/speaker-iq', 'speaker-iq', 'Io Digital');
+speakerRoute('/speaker-q42', 'speaker-q42', 'Q42');
+speakerRoute('/speaker-marieke', 'speaker-marieke', 'Marieke');
+speakerRoute('/speaker-miriam', 'speaker-miriam', 'Miriam');
+
 
 
 

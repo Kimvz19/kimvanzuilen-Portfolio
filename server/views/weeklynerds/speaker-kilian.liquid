@@ -1,0 +1,202 @@
+{% layout "server/layouts/base.liquid" %}
+
+
+{% block project %}
+
+<ul class="subjects-overview">
+    <li><h2> ✨ Speaker Kilian Valkhof ✨</h2></li>
+    <li><p>Scroll down to see my notations</p></li>
+    <li>  
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+        </svg></li>
+    </li>
+</ul>
+    {% comment %} <h2>Stop using JS, but instead HTML & CSS </h2> {% endcomment %}
+
+<section class="map-overview">
+<div class="window">
+  <div class="toolbar">
+    <div class="traffic-lights">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+    </div>
+
+    <div class="title">FIRST SPEAKER - KILIAN</div>
+
+
+  </div>
+  <div class="content">
+    <aside class="sidebar">
+      <div class="section">Favorites</div>
+      <ul>
+        <li>AirDrop</li>
+        <li>Recents</li>
+        <li>Applications</li>
+        <li>Desktop</li>
+        <li>Documents</li>
+        <li>Downloads</li>
+      </ul>
+      <div class="section">iCloud</div>
+      <ul>
+        <li>iCloud Drive</li>
+        <li>Shared</li>
+      </ul>
+      <div class="section">Tags</div>
+      <ul class="tags">
+        <li><span class="dot red-dot"></span>Red</li>
+        <li><span class="dot orange-dot"></span>Orange</li>
+        <li><span class="dot yellow-dot"></span>Yellow</li>
+        <li><span class="dot green-dot"></span>Green</li>
+        <li><span class="dot blue-dot"></span>Blue</li>
+        <li><span class="dot purple-dot"></span>Purple</li>
+        <li><span class="dot gray-dot"></span>Gray</li>
+      </ul>
+    </aside>
+
+
+  <div class="main-content">
+  
+    <div class="single-project">
+        <section class="introduction-project change-color">
+          <ul>
+            <li><p class="badge-lightpink">Speaker 1</p></li>
+            <li><h1><span class="highlight">Stop using JS,</span> but instead HTML & CSS</h1></li>
+            <li class="intro">
+              <ol>
+                <li>  Paypaine: minst krachtige taal</li>
+                <li>HTML & CSS: gebruiken voor error prevention</li>
+                <li> JSX: als alternatief benoemd</li>
+              </ol>
+            </li>
+          </ul>
+        </section>
+
+        <article class="project-section">
+          <div class="text">
+            <h2 class="gradient-greypink"> Summary </h2>
+            <p>
+             In this talk, Kilian talks about the Rule of Least power. He talks about the way a browser loads in their data, the languages, which language is heavier, better to use for different options, extc.
+             He also explains the difference between HTML, CSS and JS, and why you should use HTML and CSS more than JS. To substantiate his words, he showed some code examples, which some of them I notaded down below!
+            </p>
+          </div>
+        </article>
+
+        <article class="project-section">
+          <div class="text">
+            <h2 class="gradient-greypink"> 💫 Reflectie</h2>
+            <p>
+            I remember feeling a bit overwelmed by the amount of information, but I learned a lot. Before this talk, I never reallys stood still by the powers of the code languages. 
+            Because I just started coding, my preferences always go for HTML or CSS. 
+            But now that I have the knowlegde of why I should use those more, I will definitely use them more in the future.
+            </p>
+          </div>
+        </article>
+    </div>
+
+    <section class="topic">
+      <h2>Custom Switches</h2>
+      <article>
+        <ul>
+          <li>&lt;label&gt;&lt;input type="checkbox"&gt;&lt;/label&gt;</li>
+          <li>appearance: none; in CSS om standaard styles te verwijderen</li>
+          <li>HTML pseudo-elementen: <code>::before</code>, <code>::after</code></li>
+          <li>CSS states: <code>:checked</code>, <code>:checked::before</code> → animatie via CSS</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="topic">
+      <h2>Input Styling</h2>
+      <article>
+        <ul>
+          <li><code>:focus-visible</code> → alleen met toetsenbord zichtbaar</li>
+          <li>gebruik <code>outline</code>, <code>outline-offset</code></li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="topic">
+      <h2>Input Type Tricks</h2>
+      <article>
+        <p><code>&lt;input type="color"&gt;</code> → native color picker</p>
+      </article>
+    </section>
+
+    <section class="topic">
+      <h2>Page Animations</h2>
+      <article>
+        <h3>Smooth scroll naar anchors:</h3>
+        <pre><code>html {
+  scroll-behavior: smooth;
+}</code></pre>
+
+        <h3>Media query voor bewegingsvoorkeur:</h3>
+        <pre><code>@media (prefers-reduced-motion: no-preference) {
+  /* animaties hier */
+}</code></pre>
+      </article>
+    </section>
+
+    <section class="topic">
+      <h2>Extra</h2>
+      <article>
+        <ul>
+          <li><code>.my-target</code> → <code>scroll-margin-top: 20px;</code> als buffer bij anchor jumps</li>
+          <li>"Weekly nerd" 🧑‍💻</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="topic">
+      <h2>Accordion & Dialog (Details/Summary & Pop-ups)</h2>
+
+      <article>
+        <h3>Accordion</h3>
+        <pre><code>&lt;details&gt;
+  &lt;summary&gt;Titel&lt;/summary&gt;
+  Inhoud
+&lt;/details&gt;</code></pre>
+        <ul>
+          <li><code>details[open]</code> → zichtbaar</li>
+          <li><code>summary::marker</code>, <code>summary:hover</code>, <code>cursor: pointer</code></li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Dialog</h3>
+        <pre><code>&lt;dialog&gt;
+  &lt;p&gt;Inhoud&lt;/p&gt;
+&lt;/dialog&gt;
+
+&lt;script&gt;
+  dialog.showModal();
+&lt;/script&gt;</code></pre>
+        <ul>
+          <li>Pop-up behavior</li>
+          <li><code>form</code> met <code>method</code> + button met <code>type</code></li>
+          <li>Dialog backdrop (via ::backdrop)</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="topic">
+      <h2>Formulieren & Select</h2>
+      <article>
+        <ul>
+          <li><code>&lt;select&gt;&lt;option&gt;&lt;/option&gt;&lt;/select&gt;</code> = basis dropdown</li>
+          <li><code>appearance: none;</code> = styling van select</li>
+          <li><code>::after</code> = pijltje of styling</li>
+          <li><code>form</code> met <code>method</code> en button met <code>type</code></li>
+        </ul>
+      </article>
+    </section>
+
+    </div>
+  </div>
+  
+</div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% layout "server/layouts/base.liquid" %}
+
+
+{% block project %}
+
+<ul class="subjects-overview">
+    <li><h2> ✨ Speaker Nienke de Keijzer ✨</h2></li>
+    <li><p>Scroll down to see my notations</p></li>
+    <li>  
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+        </svg></li>
+    </li>
+</ul>
+    {% comment %} <h2>Stop using JS, but instead HTML & CSS </h2> {% endcomment %}
+
+<section class="map-overview">
+<div class="window">
+  <div class="toolbar">
+    <div class="traffic-lights">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+    </div>
+    <div class="title">TENTH SPEAKER - NIENKE</div>
+  </div>
+  <div class="content">
+    <aside class="sidebar">
+      <div class="section">Favorites</div>
+      <ul>
+        <li>AirDrop</li>
+        <li>Recents</li>
+        <li>Applications</li>
+        <li>Desktop</li>
+        <li>Documents</li>
+        <li>Downloads</li>
+      </ul>
+      <div class="section">iCloud</div>
+      <ul>
+        <li>iCloud Drive</li>
+        <li>Shared</li>
+      </ul>
+      <div class="section">Tags</div>
+      <ul class="tags">
+        <li><span class="dot red-dot"></span>Red</li>
+        <li><span class="dot orange-dot"></span>Orange</li>
+        <li><span class="dot yellow-dot"></span>Yellow</li>
+        <li><span class="dot green-dot"></span>Green</li>
+        <li><span class="dot blue-dot"></span>Blue</li>
+        <li><span class="dot purple-dot"></span>Purple</li>
+        <li><span class="dot gray-dot"></span>Gray</li>
+      </ul>
+    </aside>
+
+
+  <div class="main-content">
+  
+    <div class="single-project">
+        <section class="introduction-project change-color">
+          <ul>
+            <li><p class="badge-lightpink">Speaker 10</p></li>
+            <li><h1><span class="highlight">Accessibility</span> at GVB</h1></li>
+            <li class="intro">
+            </li>
+          </ul>
+        </section>
+
+
+        <article class="project-section">
+          <div class="text">
+            <h2 class="gradient-greypink"> Summary </h2>
+            <p>
+              Nienke was a old CMD student and is now an accessibility expert at GVB. She gave a very interesting talk about accessibility and the WCAG guidelines.
+              She explained the importance of accessibility, of testing with target groups, how to test your project for accessibility and why she likes it so much.
+          </div>
+        </article>
+
+        <article class="project-section">
+          <div class="text">
+            <h2 class="gradient-greypink"> 💫 Reflectie</h2>
+            <p>
+              Accessbility is really important as it comes to making a product available for everyone. As well as testing, so I found it very
+              handfull to hear her take on this, because she is an expert. I never knew that you could test the contrast of colors for people with bad sight or color blindness. 
+              And she gave some good tips, so I will be definetely using those in the future. Very informative talk and I enjoyed it!
+          </div>
+        </article>
+    </div>
+
+    <section class="topic">
+  <h2>Accessibility & WCAG</h2>
+  <article>
+    <ul>
+      <li>Web Content Accessibility Guidelines (WCAG)</li>
+      <li>What is accessibility? A product needs to be accessible for everyone</li>
+      <li>Focus on: keyboard control, contrast, alternatives, en scalable</li>
+    </ul>
+  </article>
+</section>
+
+<section class="topic">
+  <h2>Keyboard Accessibility</h2>
+  <article>
+    <ul>
+      <li><code>Tab</code> and <code>Shift + Tab</code> navigate between interactive elements</li>
+      <li>Most made mistakes:
+        <ul>
+          <li>→ No “skip to content”-links</li>
+          <li>→ non-checked focus state → <code>:focus</code> missing or not gestyled</li>
+          <li>→Use of <code>&lt;div role="button"&gt;</code> without proper keyboard control</li>
+        </ul>
+      </li>
+      <li>Screenreaders behaving as keyboard controls</li>
+    </ul>
+  </article>
+</section>
+
+<section class="topic">
+  <h2>Contrast problems</h2>
+  <article>
+    <ul>
+      <li>Contrast is essential for people with visual limitations</li>
+      <li>Big buttons, understandable colors and enough text size can help</li>
+      <li>minimal contrast ratios:
+        <ul>
+          <li> → text ≥ 24px of 19px bold → ratio van 3:1</li>
+          <li>→ Paragraphs and normal text → 4.5:1 minimum</li>
+        </ul>
+      </li>
+      <li>Use of extentions to change color values & measure contrasts</li>
+      <li>! branding-colors and UI-states: <code>:focus</code>, <code>:hover</code>, <code>:active</code></li>
+      <li><strong>Low contrast pitfalls:</strong>
+        <ul>
+          <li>Placeholders → mostly lightgrey, less contrast</li>
+          <li>solution: use of helping text or requestion the label text</li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+</section>
+
+
+<section class="topic">
+  <h2>Sizing & Responsiveness</h2>
+  <article>
+    <ul>
+      <li>Test the scalability of the interface</li>
+      <li>Every user sees content different</li>
+      <li>Most common issues:
+        <ul>
+          <li> → Designs are not available for 320px breedte (smaller screens)</li>
+          <li> → Extern content fall out the screen</li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+</section>
+
+
+    </div>
+  </div>
+  
+</div>
+
+</section>
+{% endblock %}
