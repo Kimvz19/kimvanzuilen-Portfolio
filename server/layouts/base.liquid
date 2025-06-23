@@ -41,9 +41,8 @@
   <main>
     {% block homeOverview %}{% endblock %}
     {% block myWork %}{% endblock %}
-    {% block contact %} {% endblock %}
+    {% block Projects %} {% endblock %}
     {% block aboutMe %}{% endblock %}
-    {% block project-hackathon %}{% endblock %}
   </main>
 
   <footer>
@@ -58,16 +57,16 @@
       </li>
 
       <li class="icon-nav">
-        <a href="/my-work"
-        class="{% if path == '/my-work' %}active{% endif %}">
+        <a href="/project-overview"
+        class="{% if path == '/project-overview' %}active{% endif %}">
         🗂️
-        <span class="icon-label">projects</span>
+        <span class="icon-label">Projects</span>
         </a>
       </li>
 
       <li class="icon-nav">
-        <a href="/hackathon"
-        class="{% if path == '/hackathon' %}active{% endif %}">
+        <a href="/weekly-nerd"
+        class="{% if path == '/weekly-nerd' %}active{% endif %}">
         🤓
         <span class="icon-label">Blog</span>
         </a>
@@ -77,13 +76,13 @@
         <a href="/about-me"
         class="{% if path == '/about-me' %}active{% endif %}">
         👩🏻‍💻
-        <span class="icon-label">About me</span>
+        <span class="icon-label">Me</span>
         </a>
       </li>
 
       <li class="icon-nav">
-        <a href="/contact"
-        class="{% if path == '/contact' %}active{% endif %}">
+        <a href="/experiences"
+        class="{% if path == '/experiences' %}active{% endif %}">
         🎓
         <span class="icon-label">Experiences</span>
         </a>

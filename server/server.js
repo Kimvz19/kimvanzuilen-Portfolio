@@ -41,11 +41,11 @@ const renderTemplate = (template, data = {}, req = {}) => {
 app.get('/', async (req, res) => {
   try {
     res.send(renderTemplate('server/views/index.liquid', {
-      title: 'home'
+      title: 'Home'
     }, req));
   } catch (err) {
     console.error(err);
-    res.status(500).send('Error loading homepage');
+    res.status(500).send('unable to load home page');
   }
 });
 
@@ -54,47 +54,47 @@ app.get('/', async (req, res) => {
 app.get('/about-me', async (req, res) => {
   try {
     res.send(renderTemplate('server/views/about-me.liquid', {
-      title: 'about me',
+      title: 'About me',
     }, req));
   } catch (err) {
     console.error(err);
-    res.status(500).send('about me page kon niet laden');
+    res.status(500).send('unable to load about me page');
   }
 });
 
 // ⭐ my work page
-app.get('/my-work', async (req, res) => {
+app.get('/project-overview', async (req, res) => {
   try {
-    res.send(renderTemplate('server/views/my-work.liquid', {
-      title: 'my work',
+    res.send(renderTemplate('server/views/project-overview.liquid', {
+      title: 'project overview',
     }, req));
   } catch (err) {
     console.error(err);
-    res.status(500).send('my work page kon niet laden');
+    res.status(500).send('unable to load projects overview');
   }
 });
 
 // ⭐ Contact page
-app.get('/contact', async (req, res) => {
+app.get('/experiences', async (req, res) => {
   try {
-    res.send(renderTemplate('server/views/contact.liquid', {
-      title: 'contact',
+    res.send(renderTemplate('server/views/experiences.liquid', {
+      title: 'Experiences',
     }, req));
   } catch (err) {
     console.error(err);
-    res.status(500).send('contact page kon niet laden');
+    res.status(500).send('unable to load experiences');
   }
 });
 
 // projects 
-app.get('/hackathon', async (req, res) => {
+app.get('/weekly-nerd', async (req, res) => {
   try {
-    res.send(renderTemplate('server/views/projcets/hackathon.liquid', {
-      title: 'hackathon project',
+    res.send(renderTemplate('server/views/projcets/weekly-nerd.liquid', {
+      title: 'weekly-nerd',
     }, req));
   } catch (err) {
     console.error(err);
-    res.status(500).send('hackathon project page kon niet laden');
+    res.status(500).send('unable to load weekly-nerd');
   }
 });
 

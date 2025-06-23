@@ -1,0 +1,163 @@
+{% layout "server/layouts/base.liquid" %}
+
+
+{% block myWork %}
+{% comment %} hier kan een project komen {% endcomment %}
+
+<ul class="weekly-overview">
+    <li><h2>Weekly Nerds</h2></li>
+    <li> <p>As part of the Web Design & Development minor, we had a speaker each week talking about their subject, tools, ideas extc.</p></li>
+    <li><p>Click on the maps 📝</p></li>
+    <li>  
+        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19V5m0 14-4-4m4 4 4-4"/>
+        </svg></li>
+    </li>
+</ul>
+
+<section class="map-overview">
+<div class="window">
+  <div class="toolbar">
+    <div class="traffic-lights">
+      <span class="red"></span>
+      <span class="yellow"></span>
+      <span class="green"></span>
+    </div>
+    <div class="title">THE SPEAKERS</div>
+  </div>
+  <div class="content">
+    <aside class="sidebar">
+      <div class="section">Favorites</div>
+      <ul>
+        <li>AirDrop</li>
+        <li>Recents</li>
+        <li>Applications</li>
+        <li>Desktop</li>
+        <li>Documents</li>
+        <li>Downloads</li>
+      </ul>
+      <div class="section">iCloud</div>
+      <ul>
+        <li>iCloud Drive</li>
+        <li>Shared</li>
+      </ul>
+      <div class="section">Tags</div>
+      <ul class="tags">
+        <li><span class="dot red-dot"></span>Red</li>
+        <li><span class="dot orange-dot"></span>Orange</li>
+        <li><span class="dot yellow-dot"></span>Yellow</li>
+        <li><span class="dot green-dot"></span>Green</li>
+        <li><span class="dot blue-dot"></span>Blue</li>
+        <li><span class="dot purple-dot"></span>Purple</li>
+        <li><span class="dot gray-dot"></span>Gray</li>
+      </ul>
+    </aside>
+  <main class="main-content">
+<div class="folders">
+
+{% comment %} Kilian {% endcomment %}
+<a href="/speaker-kilian" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+  <p>Kilian</p>
+</a>
+
+{% comment %} Peter paul Koch {% endcomment %}
+<a  href="/speaker-peter-paul-koch" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />   
+   <p>Peter-paul<br> Koch</p>
+</a>
+
+  {% comment %} Roel {% endcomment %}
+<a  href="/speaker-roel" class="folder">
+    <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />   
+    <p>Roel  <br> Nieskens</p>
+</a>
+
+{% comment %} Cassie {% endcomment %}
+
+<a  href="/speaker-cassie" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />  
+   <p>Cassie <br>  Evans</p>
+</a>
+
+
+{% comment %} Nils {% endcomment %}
+<a  href="/speaker-nils" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />   
+   <p>Nils <br> Binder</p>
+</a>
+
+{% comment %} Jeremy {% endcomment %}
+<a  href="/speaker-jeremy" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />  
+    <p>Jeremy <br> Keith</p>
+</a>
+
+{% comment %} Julia {% endcomment %}
+<a  href="/speaker-julia" class="folder">
+    <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+    <p>Julia Miocene</p>
+  </a>
+
+{% comment %} Rosa {% endcomment %}
+<a  href="/speaker-rosa" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+  <p>Rosa</p>
+</a>
+
+{% comment %} Niels {% endcomment %}
+<a  href="/speaker-niels" class="folder">
+    <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />    
+    <p>Niels <br>  Leenheer</p>
+  </a>
+
+
+{% comment %} Nienke de Keijzer {% endcomment %}
+<a  href="/speaker-nienke" class="folder">
+    <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+    <p>Nienke de Keijzer</p>
+  </a>
+
+
+{% comment %} Krijn {% endcomment %}
+<a  href="/speaker-krijn" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+  <p>Krijn</p>
+</a>
+
+{% comment %} iQ {% endcomment %}
+<a  href="/speaker-iq" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" />  
+    <p>Io <br>  Digital</p>
+</a>
+
+{% comment %} Q42 {% endcomment %}
+<a  href="/speaker-q42" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+  <p>Q42</p>
+</a>
+
+
+{% comment %} Marieke {% endcomment %}
+<a  href="/speaker-marieke" class="folder">
+  <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+  <p>Marieke</p>
+</a>
+
+{% comment %} Miriam {% endcomment %}
+<a  href="/speaker-miriam" class="folder">
+    <img src="https://media.istockphoto.com/id/1474792769/nl/vector/nerd-emoji-emoticon-with-transparent-glasses-funny-yellow-face-with-black-rimmed-eyeglasses.jpg?s=612x612&w=0&k=20&c=8ieYDQYIAAtG7KuGVnV4chyGAR6mMdPSOIu83LnabKM=" alt="image vervangen" /> 
+    <p>Miriam</p>
+</a>
+
+</div>
+
+</main>
+
+  </div>
+  
+</div>
+
+</section>
+
+{% endblock %}
