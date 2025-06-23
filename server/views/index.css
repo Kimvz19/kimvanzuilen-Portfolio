@@ -61,9 +61,10 @@
   overflow-x: auto;
 
   gap: var(--2-rem);
-  padding: var(--5-rem) var(--2-rem) var(--1-rem) var(--5-rem) ;
+  padding: var(--5-rem) 0 var(--1-rem) var(--5-rem) ;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+
 }
 
 .project-gallery::-webkit-scrollbar {
@@ -702,7 +703,6 @@ pre code {
   }
 
 }
-
 
 
 /* Media queries   */
