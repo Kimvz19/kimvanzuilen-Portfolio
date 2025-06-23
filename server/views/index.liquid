@@ -1,7 +1,7 @@
 {% layout "server/layouts/base.liquid" %}
 
 {% block homeOverview %}
-
+<main class="extra-styling">
 <section class="widgets">
   <ul>
     <li class="introduction">
@@ -12,40 +12,39 @@
 
     <li class="time">
         <p>My name is </p>
-        <p>Kim</p>
+        <p>Kim van Zuilen</p>
       </li>
+
+      <li class="subjects">
+      </li>
+
+      <li class="weekly-nerd">
+        <p>Weekly nerds</p>
+        <a href="/weeklynerd-overview">See more</a>
+      </li> 
+
 
       <li class="hackathon">
         <img src="/assets/images/profile-picture.png" alt="profile-pic">
      </li>
 
-    <li class="subjects">
-        <p>Projects</p>
-        <a href="/projects-overview">See more</a>
+
+    
+
+      <li class="meesterproef">
+            <h3>Front-end Developer & UX, UI Designer</h3>
       </li>
 
-      <li class="weekly-nerd">
-        <p>Weekly nerds</p>
-        <a href="/weeklynerd-overview">See more</a>
+
+
+
+     <li class="hackathon">
+      <img src="/assets/images/fav-picture.jpeg" alt="picture with Cyd and Abby">
       </li>
-      <li class="weekly-nerd">
-        <p>Weekly nerds</p>
-        <a href="/weeklynerd-overview">See more</a>
-      </li>
-      
-
-  
 
 
-    {% comment %} <li class="meesterproef">
-            <h3>Hi I'm Kim</h3>
-    </li> {% endcomment %}
+    
 
-    <li class="weekly-nerd">
-        <p>
-           Front-end developer & UX, UI Designer!
-        </p>
-    </li>
 
    
 
@@ -79,6 +78,6 @@
 
   </ul>
 </section>
-
+</main>
 
 {% endblock %}
