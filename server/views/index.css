@@ -1418,7 +1418,7 @@ details p {
 }
 
 
-.project-section::before {
+.card-look::before {
   content: '';
   position: absolute;
   top: 1.8rem;
@@ -1429,21 +1429,6 @@ details p {
   background-color: #e2c4f3;  
   border-radius: 40px;
   z-index: 2;
-}
-
-/* 👇 Dit is de uitstulping bovenop */
-.project-section::after {
-  content: '';
-  position: absolute;
-  top: 1.2rem; /* of iets hoger/lager afstemmen indien nodig */
-  left: 50%;
-  transform: translate(-50%, -100%);
-  width: 2rem;
-  height: 1rem;
-  
-  background-color: #e2c4f3;
-  border-radius: 1rem 1rem 0 0;
-  z-index: 1;
 }
 
 
