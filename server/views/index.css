@@ -267,7 +267,7 @@
   overflow-x: auto;
 
   gap: var(--2-rem);
-  padding: var(--5-rem) 0 var(--1-rem) var(--5-rem) ;
+  padding: 3rem;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 
@@ -1094,4 +1094,57 @@ hr{
   
   }
 
+}
+
+
+
+/* Introduction projects */
+
+.intro-project{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.526);
+
+  width: 100%;
+  padding: 2rem;
+  height: 100%;
+  gap: var(--1-rem);
+
+  border-left: none;
+  border-right: none;
+  border-top: 5.5px dashed var(--color-white);
+  border-bottom: 5.5px dashed var(--color-white);
+
+
+
+  button{
+    padding: .5rem 1.5rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-weight: var(--font-weight-600);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-pink2);
+      color: var(--color-white);
+    }
+  }
+
+  h2{
+    font-size: var(--2-rem);
+    font-weight: var(--font-weight-400);
+    margin-bottom: var(--1-rem);
+    text-align: center;
+  }
+
+  p{
+    max-width: 65rem;
+  }
 }
