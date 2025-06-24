@@ -1584,13 +1584,13 @@ details p {
 
 /* === AFTER PROCESS (REFLECTIE & LEREN) === */
 .detail-after-process {
-  background: linear-gradient(to right, #fce4f8, #f5d6f2);
-  padding: 2rem;
+  background: #e9a5c6;
+  padding: .5rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 
 @media (min-width: 768px) {
@@ -1609,29 +1609,21 @@ details p {
   padding: 1.5rem;
   border-radius: 16px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  list-style-type: disc;
+
 }
 
 .detail-learned h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 300;
   margin-bottom: 1rem;
-}
-
-.detail-after-process ul {
-  list-style-type: disc;
-  margin-left: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-.detail-after-process li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+  padding: 0.4rem 1rem;
 }
 
 .detail-banner {
-  background-color: #ca6db4;
+  background-color: #da56a1;
   color: #fff;
-  font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   padding: 0.4rem 1rem;
   border-radius: 6px;
   display: inline-block;
