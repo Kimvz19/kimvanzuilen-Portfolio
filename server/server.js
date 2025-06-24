@@ -134,6 +134,65 @@ speakerRoute('/speaker-marieke', 'speaker-marieke', 'Marieke');
 speakerRoute('/speaker-miriam', 'speaker-miriam', 'Miriam');
 
 
+// projects 
+app.get('/light-pollution', async (req, res) => {
+  try {
+    res.send(renderTemplate('server/views/projects/light-pollution', {
+      title: 'Light Pollution',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('unable to load project light pollution');
+  }
+});
+
+// projects 
+app.get('/information-design', async (req, res) => {
+  try {
+    res.send(renderTemplate('server/views/projects/information-design', {
+      title: 'Information design',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('unable to load project information design');
+  }
+});
+
+// projects 
+app.get('/emerging-technologies', async (req, res) => {
+  try {
+    res.send(renderTemplate('server/views/projects/emerging-technologies', {
+      title: 'Emerging technologies',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('unable to load project emerging technologies');
+  }
+});
+
+// projects 
+app.get('/society-and-interaction', async (req, res) => {
+  try {
+    res.send(renderTemplate('server/views/projects/society-and-interaction', {
+      title: 'Society and interaction',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('unable to load project society and interaction');
+  }
+});
+
+// projects 
+app.get('/responsable-sneakers', async (req, res) => {
+  try {
+    res.send(renderTemplate('server/views/projects/responsable-sneakers', {
+      title: 'Responsable sneakers',
+    }, req));
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('unable to load project Responsable sneakers');
+  }
+});
 
 
 app
