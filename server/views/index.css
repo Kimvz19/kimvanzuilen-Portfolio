@@ -3,8 +3,7 @@
 .widgets {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  align-items: center;  
 
   gap: 50px;
   padding: 25px;
@@ -22,7 +21,6 @@
     gap: 10px;
     max-width: 1500px;
     overflow: auto;
-    height: 100%;
   }
 
   li{
@@ -128,6 +126,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 .meesterproef {
@@ -927,6 +927,12 @@ pre code {
 @media (min-width: 700px) {
   .widgets ul {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 1300px){
+  .widgets{
+    height: 100vh;
   }
 }
 
