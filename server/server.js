@@ -146,17 +146,6 @@ app.get('/light-pollution', async (req, res) => {
   }
 });
 
-// projects 
-app.get('/information-design', async (req, res) => {
-  try {
-    res.send(renderTemplate('server/views/projects/information-design', {
-      title: 'Information design',
-    }, req));
-  } catch (err) {
-    console.error(err);
-    res.status(500).send('unable to load project information design');
-  }
-});
 
 // projects 
 app.get('/emerging-technologies', async (req, res) => {
